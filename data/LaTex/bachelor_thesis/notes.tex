@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setmainfont[Mapping=tex-text]{CMU Serif}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=2cm,right=2cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{hyperref}
+
+\begin{document}
+
+{\Large Computer adaptive practice of Maths ability using a new item response model
+for on the fly \textcolor{Maroon}{ability and difficulty estimation}\cite{adaptive_elo}} \href{https://drive.google.com/open?id=0BwdzQv8PTtSZdlFvUGN2V0pFWVk}{\copyright}
+
+\bigskip\\\indent\textit{\Large Введение:}
+    Computerized adaptive practice system, призваная улучшить голландскую систему образования, а именно изучение математики в начальной школе, с помощью приложения MathsGarden.com (на старте подключили более 150 школ). Рекомендации от специальной комиссии: больше практики, большее число и эффективность замеров и их использование (\textcolor{ForestGreen}{Fullan, 2006}). Комбинирование практики и замеров + куча пользы от компьютеров для учителя (автоматическая проверка, много фидбека по прогрессу учеников).
+    
+    \fbox{\parbox{\textwidth}{%
+        \textit{Item-response theory (\href{https://en.wikipedia.org/wiki/Item_response_theory}{wiki})}: подход к составлению тестов, уделяющий внимание возможной разнице в сложностях задач. Основывается на предположении, что вероятность решения студентом задачи есть функция от параметров студента и параметров задачи. Возможные параметры задачи: сложность, дискриминативность, возможность угадать ответ; у студента параметр -- ability (знания по предмету). Предполагается, что сами задачи локально независимы. \\Item response function: определяет вероятность, что студент ответит на задачу, разделяются по количеству параметров, от которых зависят. 
+        \\\textit{Rasch model (\href{https://en.wikipedia.org/wiki/Rasch_model}{wiki})}: 1PL IRT model -- однопараметрическая логистическая модель, которая предполагает, что вероятность правильно ответить на задачу зависит только от разности между ability студента и сложностью задачи.
+    }}
+    
+    \\\indent Про computer adaptive testing: \textcolor{ForestGreen}{Van der Linden & Glas, 2000; Wainer et al., 2000}. Оно основано на item response theory (IRT). По большей части используются одно-параметрические логистические модели, которые используют разницу между умениями субъекта и сложностью задачи -- Rasch model. Двух-параметрические используют также дискриминативность заданий (способность задания оценить умения субъекта после прохождения). Идея CAT -- оценивать умения студента, динамически предлагая ему задания в зависимости от решений. Изначально цель CAT -- составить финальную оценку, измерить знания студента, она позволяет сократить длину теста до 50\%, но наша цель -- совместить практику и измерения. Проблемы CAT и перехода от тестирования к практике:
+         \begin{itemize}
+            \item в CAT нужно предварительно назначить задачам сложность
+            \item CAT наиболее эффективна, если сложность задачи совпадает со умениями студента. В таком случае вероятность решить задачу -- $0.5$, это печалит студентов. Повышение этой вероятности ухудшает точность и понижает эффективность.
+            \item общая проблема: баланс между скоростью и точностью индивидуален и сильно влияет на результаты (speed-accuracy trade-off)
+        \end{itemize}
+    \\\indent CAP = Computer Adaptive Practive решает эти проблемы, основывается на Elo Rating System\cite{elo1978rating} и на правилах для оценки скорости и точности (используют исследование про отрицательную корреляцию между скоростью ответа на простые вопросы и умениями, чтобы понизить сложность, повысив следовательно correct rate, не теряя точности).
+
+\bigskip\\\indent\textit{\Large Методика:}
+    3500 активных участников, один год, 3.5 миллиона решений. Интерфейс -- сад с цветами, соответствующими разным темам, размер цветка -- знания студента. В задаче дается $20$ секунд, ответ при оставшихся $n$ секундах дает $+n$ монет, если он правильный и $-n$, если нет. Это то самое speed-accuracy правило.
+    \\\indent Как это работает:
+    \begin{itemize}
+        \item Elo rating system: шахматный рейтинг для подсчета относительных умений игроков.
+            \begin{itemize}
+                \item начальное значение рейтинга -- $\theta$, затем оно итеративно меняется
+                \item обновление для $j$-го игрока, если результат матча $S_j \in \{0, 0.5, 1\}$, а ожидался $E(S_j)$: $\hat{\theta_j} = \theta_j + K(S_j - E(S_j))$, при этом $E(S_j) = \frac{1}{1 + 10 ^ {(\theta_j - \theta_k) / 400}}$
+                \item $K$ задает то, как сильно влияет отклонение от результата на рейтинг, в стандартной модели -- константа (на самом деле разное для нескольких категорий игроков), \textcolor{ForestGreen}{Glickman (1995)} предложил сделать $K$ зависимой от уверенности в результате (чтобы не глючить из-за новичков и тех, кто давно не играл). Подробнее, почему не константа: \textcolor{ForestGreen}{Lodder, 2012} \href{https://drive.google.com/open?id=0BwdzQv8PTtSZRmhpQ3NpM1FRYWs}{\copyright}
+            \end{itemize}
+        \item CAP: заменяем одного из игроков в Elo на задачу (успешно используется в шахматной тестирующей онлайн-системе Chess Tactics Server)
+            \begin{itemize}
+                \item  $\hat{\theta_j} = \theta_j + K_j(S_{ij} - E(S_{ij}))$ -- знания студента, \\ $\hat{\beta_i} = \beta_i + K_i(E(S_{ij}) - S_{ij})$ -- сложность задачи
+                \item $K_j = K(1 + K_+ U_j - K_- U_i)$ \\ $K_i = K(1 + K_+ U_i - K_- U_j)$, \\
+                где $U_i$ и $U_j$ -- уверенности в оценке студента и задачи соответственно, \\ $K = 0.0075$, $K_+ = 4$ и $K_- = 0.5$ -- \textcolor{Maroon}{почему?} не сказано.
+                \item неопределенность $U$ зависит от частоты и давности решений, $0 \le U \le 1$, $\hat{U} = U - \frac{1}{40} + \frac{1}{30} D$, при каждом пересчете (использовании) уменьшается на $\frac{1}{40}$, со временем ($D$ -- число дней без использования задачи / без практики пользователя) увеличивается. Изначально $U$ равняется единице.
+            \end{itemize}
+        \item Высокая скорость, высокие ставки (High speed, high stakes): $x_{ij}$ -- правильность ответа ($0$ или $1$) студента $j$ на задачу $i$, $t_{ij}$ -- время, потраченное на задачу, $d_i$ -- временной лимит, $a_i$ -- параметр дискриминативности. Формулы из \textcolor{ForestGreen}{Maris, G. & Van der Maas, H. (Submitted for publication, 2011). Scoring rules based on response time and accuracy.} \\ 
+            Счет "игры" определяется как $S_{ij} = (2 x_{ij} - 1)(a_i d_i - a_i t_{ij}) =^* (2 x_{ij} - 1)(1 - t_{ij} / d_i) $: вторая скобка тем больше, чем меньше времени потрачено, первая скобка -- $+1$ или $-1$ в зависимости от правильности ответа. \\ 
+            Предположительный счет игры: $E(S_{ij}) = a_i d_i \frac{e^{2 a_i d_i (\theta_j - \beta_i)} + 1}{e^{2 a_i d_i (\theta_j - \beta_i)} - 1} - \frac{1}{\theta_j - \beta_i} =^* \frac{e^{2 (\theta_j - \beta_i)} + 1}{e^{2 (\theta_j - \beta_i)} - 1} - \frac{1}{\theta_j - \beta_i}$, \\ $\ast$ сообразно однопараметрической задаче считаем $a_i = 1/d_i$.
+        \item Выбор задач: выбираются те, вероятность ответить на которые составляет $.75$, повторять не ранее чем после 20 других задач, какая-то хитрая формула, считаем $\beta_t = \hat{\theta_j} + \ln{\frac{P}{1 - {P}}}$, где $P \in \sim(0.75, 0.1)$ -- нормально распределена, причем $0.5 < P < 1$ (обрезаем). Для использования берется ближайшая доступная задача: $\min_i|\beta_i - \beta_t|$. Как это работает, непонятно :(
+    \end{itemize}
+
+
+
+\bigskip\\\indent\textit{\Large Результаты:}
+    \begin{itemize}
+        \item точность предсказаний: из-за повышения средней вероятности решить задачу хромает без учета скорости (соотносится с другим исследованием), но с ней все ок
+        \item соответствие реальности: сопоставили с результатами учеников в каком-то рейтинге -- коррелирует
+        \item надёжность оценки сложности: проверяли зеркальными задачами (у $7 + 4$ и $4 + 7$ должны быть почти одинаковые сложности) -- коррелируют ($.88$ для задач на сложение, $.99$ для умножения), также сравнивали дискриминативность с нормально вычисленной -- тоже коррелирует ($.74$ и $.71$), наконец, проверили, как сильно меняется со временем, корреляция тоже внушительная. \textcolor{Maroon}{!!!} кажется, у них изначально задачи размечены не одинаково, а по учебнику, откуда они взяты. Интервал значений не указан :(
+        \item переиспользование задач: проверили, что при повторном показе результат должен быть выше ожидаемого -- таки правда выше
+        \item посмотрели на мотивацию -- норм, не только в школе решают, и количество решений не коррелирует с уровнем знаний -- значит, всем подходит; посмотрели на типичные ошибки -- круто, можно проводить общую диагностику (что сложнее, где ошибки и почему)
+        \item \textcolor{Maroon}{не посмотрели на динамику и на то, насколько это вообще помогает}
+    \end{itemize}
+    
+\bigskip\\\indent\textit{\Large Обсуждение:}
+    Одна из проблем Elo рейтинга -- инфляция и дефляция (\textcolor{ForestGreen}{Glickman, 1999}), aka дрифт, например, тот факт, что ученики постепенно развиваются и их прежние оценки становятся уже относительно низкими -- тут это не страшно, так как оценки задач также понижаются. Но проблема в интерпретации рейтинга. Еще вопрос -- время сходимости алгоритма. На нее влияет то, как мы вычисляем неопределенность, которая зависит от $K$, а возможно лучше было бы вычислять неопределенность через нарушение каких-то паттернов.
+    \\\indent тут еще много всего, не очень интересно
+
+\bigskip\\\indent\textit{\Large \color{ForestGreen}Ссылки:}
+
+    \begin{itemize}
+        \item статью не найти, подтверждает мысли исследователей про общие потребности: Fullan, M. (2006). The future of educational change: system thinkers in action. Journal of Educational Change, 7, 113–122.
+        \item про то, что высокий success rate лучше для мотивации, чем невысокий: Ericsson, K. A. (2006). The cambridge handbook of expertise and expert performance. chapter The Influence of experience and Deliberate Practice on the Development of Superior Expert Performance. Cambridge University Press.
+        \item \textcolor{ForestGreen}{Computerized Adaptive Testing}: Eggen, T. J. H. M., & Verschoor, A. J. (2006). Optimal testing with easy or difficult items in computerized adaptive testing. Applied Psychological Measurement, 30, 379–393.
+        \item Wainer, H., Dorans, N., Eignor, D., Flaugher, R., Green, B., Mislevy, R., et al. (2000). Computerized adaptive testing: A primer (2nd ed.). Hillsdale, NJ: Erlbaum.
+        \item кажется, параллельная статья их коллег: Maris, G. & Van der Maas, H. (Submitted for publication). Scoring rules based on response time and accuracy.
+        \item Van der Linden, W. (2007). A hierarchical framework for modeling speed and accuracy on test items. Psychometrika, 72, 287–308.
+        \item Van der Linden, W., & Glas, C. (2000). Computerized adaptive testing: Theory and Practice. Dordrecht, The Netherlands: Kluwer Academic Publishers.
+        \item \textcolor{ForestGreen}{IRT:} Embretson, S. E., & Reise, S. P. (2000). Item response theory for psychologists (1st ed.). Mahwah: Lawrence Erlbaum.
+        \item Hambleton, R. K., & Swaminathan, H. (1985). Item response theory:principles and applications/Ronald K. Hambleton, Hariharan Swaminathan. Distributors for. North America, Kluwer Boston, Boston:Hingham, MA, U.S.A: Kluwer-Nijhoff Pub.
+        \item Hambleton, R. K., Swaminathan, H., & Rogers, H. J. (1991). Fundamentals of item response theory/Ronald K. Hambleton, H. Swaminathan, H. Jane Rogers. Newbury Park, Calif: Sage Publications.
+        \item Van der Linden, W., & Hambleton, R. K. (Eds.). (1997). Handbook of Modern item response theory (1st ed).. Springer. \href{https://drive.google.com/open?id=0BwdzQv8PTtSZTUZ1cENUZ3MxTE0}{\copyright}
+        \item \textcolor{ForestGreen}{Elo}, A. (1978). The rating of Chessplayers, Past and present. New York: Arco Publishers.
+        \item Glickman, M. (1995). A comprehensive guide to chess ratings. American Chess Journal, 3, 59--102. \href{https://drive.google.com/open?id=0BwdzQv8PTtSZcDROWjd1OXJYb2M}{\copyright}
+        \item Glickman, M. (1999). Parameter estimation in large dynamic paired comparison experiments. Applied Statistics, 48, 377–394. \href{https://drive.google.com/open?id=0BwdzQv8PTtSZWFZIbC1OWGc4YTA}{\copyright}
+        \item Van der Maas, H., & Wagenmakers, E. J. (2005). A psychometric analysis of chess expertise. The American Journal of Psychology, 118, 29–60.
+    \end{itemize}
+    
+\bigskip\\\indent\textit{\Large Как это использовать?:}
+    \begin{itemize}
+        \item умения (ability, но нужно другое название) пользователя будут считаться отдельно для разных тегов, которые он проходит (может, не для всех?), храниться в TagProgress вместе с uncertainty (изначально $1$, потом при каждом решении пересчитывается как $\hat{U} = U - \frac{1}{40} + \frac{1}{30} D$, но при этом остается в пределах $[0, 1]$. Получается, нужно хранить также время последнего решения пользователем задачи с этим тегом (для $D$). На самом деле не в TagProgress, а пока в отдельной модели, которая будет привязываться к пользователю и тегу.
+        \item сложность (difficulty) задачи должна привязываться к тегу, чтобы можно было связать эту сложность с какой-то из ability пользователя. Видимо, нужно обрабатывать ситуацию с несколькими тегами. Кроме сложности для задачи и каждого ее тега нужно хранить неуверенность этой оценки, плюс уже только для задачи хранить (или считать?) время ее последнего решения для пересчета неуверенности. \\ Как вариант, можно хранить сложность просто для задачи, а связывать с ability пользователя через один наиболее подходящий тег (это решит проблему с добавлением/удалением тегов, но создаст проблему выбора тега).
+        \item далее нужно как-то агрегировать эти сложности по степам для урока (вообще пока в первом курсе будет по одной задаче на урок, так что это не проблема), и затем выбрать из всех доступных уроков какой?
+            \begin{itemize}
+                \item тот, вероятность решить который сейчас составляет $0.75$? так сделано в статье, но это каким-то не очевидным образом определяют
+                \item просто любой, чья сложность выше или ниже знаний пользователя в зависимости от его предыдущего ответа (правильный -- сложнее, неправильный -- проще)
+            \end{itemize}
+        \item выбрав урок, предлагаем его пользователю, он его решает, а мы записываем, что порекомендовали
+        \item нужно предсказать "счет игры", то есть то, решит пользователь задачу или нет. Для этого по всем тегам задачи (с надеждой, что он будет один) посмотреть на ability пользователя по этому тегу ($\theta_j$), на сложность степа по этому тегу ($\beta_i$) и вычислить предположительный счет по формуле $E(S_{ij}) = \frac{e^{2 (\theta_j - \beta_i)} + 1}{e^{2 (\theta_j - \beta_i)} - 1} - \frac{1}{\theta_j - \beta_i}$, и как-то агрегировать предсказания по всем тегам.
+        \item нужно посчитать реальный счет: $S_{ij} = (2 x_{ij} - 1)(1 - t_{ij} / d_i) $, где $t_{ij}$ -- время, потраченное на задачу. \textcolor{Maroon}{У нас нет лимита на время прохождения.} Можно как-то использовать time\_to\_complete ($ttc$), когда он известен у степа, например, считать $S_{ij} = (2 x_{ij} - 1)(1 - \min\{t_{ij} / (2 ttc_i), 1)} $, тогда первая скобка определяет знак в зависимости от правильности ответа, а вторая равна нулю, если потрачено больше чем $2 tcc_i$, иначе тем ближе к единице, чем меньше времени было потрачено. Правильность ответа -- просто прошел или не прошел урок. Правда, есть еще вариант "не интересно", он не понятно чему соответствует, но такой урок в принципе не должен больше показываться.
+        \item разница между реальным счетом и предсказанным, а также степень уверенности в результатах влияют на изменения оценки знаний пользователя и сложности квиза (и, возможно, на дальнейшее развитие событий).
+        \item предложение пользователю нужно как-то хранить (в CachedRecommendations), пока он на него не отреагирует (не придет post-запрос с реакцией), после этого сразу генерить новое (и чистить время от времени давно не использующиеся кешированные)
+        \item изначально ставим ability = 0, а difficulty берем из баллов, назначенных преподавателем за решение задачи, нормировав их по всему курсу.
+    \end{itemize}
+    
+\bigskip\\\indent\textit{\Large Item Selection:}
+    \begin{itemize}
+        \item Computerized Adaptive Testing Item Selection in Computerized Adaptive Learning Systems Theo J.H.M. Eggen \href{https://drive.google.com/open?id=0BwdzQv8PTtSZZjhMZTd1WS1peTA}{\copyright} -- сложно, подводится статистическая база, \textcolor{ForestGreen}{много ссылок}
+        \item объяснения способа подсчета $\beta_t$ и констант $K$, $K_+$, $K_-$ не нашла, в статье это опущено
+    \end{itemize}
+
+%\textcolor{ForestGreen}{}
+%\textcolor{Maroon}{}
+%\href{https://drive.google.com/open?id=0BwdzQv8PTtSZRmhpQ3NpM1FRYWs}{\copyright}
+
+\bigskip
+\bibliography{diploma}{}
+\bibliographystyle{plain}
+
+\end{document}
