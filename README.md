@@ -1,23 +1,24 @@
 # CV
 * [read pdf](CV/CV_Lena_Volzhina.pdf), [LaTex](CV/CV_Lena_Volzhina.tex)
 
-# Публикации
-* Cтатья про магнитометрические данные (TODO: tex-сорцы, arxiv)
-* Постер на RuSSIR 2015 про магнитометрические данные (TODO: tex-сорцы)
-* Бакалаврский диплом про рекомендательные системы в Stepik (TODO: tex-сорцы)
+# Публикации / постеры / статьи
+* Cтатья про магнитометрические данные ([IEEE Library](https://ieeexplore.ieee.org/document/7584873/?reload=true))
+* Постер на RuSSIR 2015 про магнитометрические данные ([pdf](data/Detection%20of%20anomalies%20of%20magnetic%20field%20using%20clustering.pdf))
+* Бакалаврский диплом про рекомендательные системы в Stepik ([read pdf](data/LaTex/bachelor_thesis/lena_volzhina_diploma.pdf))
 * Статьи на хабре по бакалаврскому диплому: [1](https://habr.com/company/stepic/blog/302702/), [2](https://habr.com/company/stepic/blog/307670/), [3](https://habr.com/company/stepic/blog/325206/)
-* Магистерский диплом про эксперименты в Яндекс.Погоде (TODO: tex-сорцы)
-[//]: # (* статья про осадки? -- пока нет)
+* Магистерский диплом про эксперименты в Яндекс.Погоде ([read pdf](data/LaTex/master_thesis/pdf/diploma_print.pdf))
+[//]: # (* статья по магистерской -- пока нет)
 
 # Доклады
-* PyLadies Meetup #1 (TODO: ссылки на видео и презентацию)
-* PiterPy2018 (TODO: ссылки на видео и презентацию)
+* "С чего начать изучение алгоритмов" @ PyLadies SPb Meetup #1 07.08.18: [video [ru]](https://youtu.be/DfXsnSDouEo?t=859)
+* "Как подружить физические модели, машинное обучение и производительность продакшена" @ PiterPy 2018 02.11.18: [description](https://piterpy.com/ru/materials/2493) (TODO: ссылка на видео) 
 
 # Конференции
-* RuSSIR 2015 (постер)
-* DataFest 2018 (стенд Яндекса)
-* PyCon.DE 2018
-* PiterPy 2018 (доклад)
+* [RuSSIR 2015](http://romip.ru/russir2015/) (постер)
+* [SEIM 2017](http://seim-conf.org/archive/2017/) (доклад, студенческая конференция)
+* [DataFest 2018](http://datafest.ru/5/) (стенд Яндекса)
+* [PyCon.DE + PyData 2018](https://de.pycon.org)
+* [PiterPy 2018](https://piterpy.com) (доклад)
 
 # Онлайн-курсы
 * Стэпик
@@ -26,4 +27,7 @@
 # Прочее
 * HacktoberFest 2018
 
-TODO: en version
+TODO: 
+* en version
+* фотки
+* конспект с PyCon.DE
