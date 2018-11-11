@@ -1,3 +1,6 @@
+# CV
+* [read pdf](CV/CV_Lena_Volzhina.pdf), [LaTex](CV/CV_Lena_Volzhina.tex)
+
 # Публикации
 * Cтатья про магнитометрические данные (TODO: tex-сорцы, arxiv)
 * Постер на RuSSIR 2015 про магнитометрические данные (TODO: tex-сорцы)
