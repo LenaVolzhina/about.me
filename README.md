@@ -18,7 +18,7 @@
 * [RuSSIR 2015](http://romip.ru/russir2015/) (постер)
 * [SEIM 2017](http://seim-conf.org/archive/2017/) (доклад, студенческая конференция)
 * [DataFest 2018](http://datafest.ru/5/) (стенд Яндекса)
-* [PyCon.DE + PyData 2018](https://de.pycon.org)
+* [PyCon.DE + PyData 2018](https://de.pycon.org) (участие, [заметки (много фоток)](data/PyCon.DE_2018_notes.md))
 * [PiterPy 2018](https://piterpy.com) (доклад)
 
 # Онлайн-курсы
