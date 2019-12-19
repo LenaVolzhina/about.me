@@ -7,6 +7,7 @@
 [Заметки прошлого года](./PyCon.DE_2018_notes.md)
 
 Тред с частью слайдов: https://twitter.com/i/moments/1182282928577011713
+
 Видео WIP: https://administraitor.video/edition/PyCon.DE/2019
 
 # Ссылки на доклады
@@ -16,12 +17,14 @@
 ### Automating feature engineering for supervised learning? Methods, open-source tools and prospects.
 
 [описание](https://de.pycon.org/program/pydata-7eepkx-automating-feature-engineering-for-supervised-learning-methods-open-source-tools-and-prospects-thorben-jensen/)
+
 Слайды: https://github.com/Informationsfabrik/feature-engineering-slides/blob/master/pydata2019_feature-engineering.pdf
 
 
 ### Creating an Interactive ML Conference Showcase
 
 [описание](https://de.pycon.org/program/pydata-mmxquc-creating-an-interactive-ml-conference-showcase-harald-bosch/)
+
 Симпатичная игрушка наподобие Teachable Machine, только прямо в jupyter notebook (предобученные модели из keras etc)
 
 ### Birds of a feather flock together - Tracking pigeons with Python and OpenCV
@@ -40,23 +43,27 @@
 ### Version Control for Data Science
 
 [описание](https://de.pycon.org/program/pydata-ppgwxl-version-control-for-data-science-alessia-marcolini/)
+
 Слайды: https://twitter.com/viperale/status/1182607936520151040
 
 
 ### Professional Development and Career Progression for Data Scientists
 
 [описание](https://de.pycon.org/program/pydata-e3lfdl-professional-development-and-career-progression-for-data-scientists-noa-tamir/)
+
 Слайды: https://github.com/noatamir/Talks/blob/master/PyConDE2019-DSCareer-Grow.pdf
 
 
 ### Your Name Is Invalid!
 
 [описание](https://de.pycon.org/program/pydata-zna8wn-your-name-is-invalid-miroslav-sedivy/)
+
 Упоминал: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 
 ### Making the complex simple in data viz
 
 [описание](https://de.pycon.org/program/pydata-nc8vva-making-the-complex-simple-in-data-viz-tania-vasilikioti/)
+
 Слайды: https://github.com/tvasil/pyconde2019
 
 
@@ -67,14 +74,18 @@
 
 ### Boosting simulation performance with Python
 [описание](https://de.pycon.org/program/pyconde-ceymmk-boosting-simulation-performance-with-python-eran-friedman/)
+
 Слайды https://github.com/eranfrie/pycon_de_2019
+
 Роботы, библиотека для симуляции SimPy. Discrete-Event Simulation. Event-Driven Component (для мультитреда можно сделать регулярный join). Distributed Simulation.
 
 
 ### How to choose better colors for your data visualizations
 
 [описание](https://de.pycon.org/program/pydata-qe3uuq-how-to-choose-better-colors-for-your-data-visualizations-daniel-ringler/)
+
 Слайды https://github.com/dringler/talks/tree/master/pydata/berlin2019
+
 Лучше посмотреть https://youtu.be/xAoljeRJ3lU
 
 
@@ -96,13 +107,16 @@
 ### [не была] Tools that help you get your experiments under control
 
 [описание](https://de.pycon.org/program/pydata-cwmae7-tools-that-help-you-get-your-experiments-under-control-katharina-rasch/)
+
 Слайды https://github.com/krasch/presentations/blob/master/reproducibility_pydata2019.pdf
 
 
 ### Are you sure about that?! Uncertainty Quantification in AI
 
 [описание](https://de.pycon.org/program/pydata-wqmpsw-are-you-sure-about-that-uncertainty-quantification-in-ai-florian-wilhelm/)
+
 Блог-пост https://www.inovex.de/blog/uncertainty-quantification-deep-learning/
+
 Слайды: https://www.slideshare.net/FlorianWilhelm2/uncertainty-quantification-in-ai
 
 
@@ -144,4 +158,5 @@
 ### [не была] Using machine learning for Level Generation in Snake (video-game)
 
 [описание](https://de.pycon.org/program/pydata-vcsbuy-using-machine-learning-for-level-generation-in-snake-video-game-filipe-silva/)
+
 Гитхаб: https://github.com/Filipedls/Snake_PyData
