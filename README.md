@@ -23,17 +23,19 @@
 * [RuSSIR 2015](http://romip.ru/russir2015/): poster (links above)
 * [SEIM 2017](http://seim-conf.org/archive/2017/): talk about my work on master's thesis
 * [DataFest 2018](http://datafest.ru/5/): Yandex.Weather stand
-* [PyCon.DE + PyData 2018](https://de.pycon.org): listener, [notes (a lot of pictures)](data/PyCon.DE_2018_notes.md))
+* [PyCon.DE + PyData 2018](https://de.pycon.org): listener, [notes (a lot of pictures)](data/PyCon.DE_2018_notes.md)
 * [PiterPy 2018](https://piterpy.com): talk about Yandex.Weather architecture (links above)
 * [DataFest 2019](http://datafest.ru/6/): Yandex.Weather stand
-* [PyCon.DE + PyData 2019](https://de.pycon.org): listener, [notes](data/PyCon.DE_2019_notes.md))
-* [YaTalks 2019](yandex.ru/promo/events/yatalks-moscow/): Yandex.Weather stand
+* [PyCon.DE + PyData 2019](https://de.pycon.org): listener, [notes](data/PyCon.DE_2019_notes.md)
+* [Pytup](https://yandex.ru/pytup/): talk about Yandex.Weather (links above)
+* [YaTalks 2019](https://yandex.ru/promo/events/yatalks-moscow/): Yandex.Weather stand
 
 
 # Online courses
 * Stepik.org: [certificates](https://stepik.org/users/35099/certificates)
 * Open Machine Learning Course: https://github.com/Yorko/mlcourse.ai
 * Learning How to Learn: [coursera](https://www.coursera.org/learn/learning-how-to-learn)
+
 [//]: # (* книга по нейронным сетям)
 
 
