@@ -18,6 +18,7 @@
 * "Couple of words about motivation" @ Django Girls SPb #3 03/08/19 [slides [ru]](https://docs.google.com/presentation/d/1tBtdq7ZejwFHhtr4jbuyKYLn9a1XgxAiiFlttQ3orGA/edit?usp=sharing)
 * "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ Pytup 23/11/19 [video [ru]](https://youtu.be/ECALEJ79KHg?list=PLQC2_0cDcSKCXhELTYYhZdr-aSisYHrXQ)
 * "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ PyConBY 22/02/20
+* "How many times have you tried to learn algorithms?" @ WTM Meetup #2 30/01/20 [slides [ru]](https://docs.google.com/presentation/d/10-1h9GR7D2VmVzzg17oBug_VvHEsPtXUiKDktHW2lDw/edit?usp=sharing)
 * "How I tried to quit using Matplotlib" @ Pytup 26/02/20 [slides [ru]](https://docs.google.com/presentation/d/1USgF8ssHvrJ1eOLo3dTAhned_xX3W5klhTkim62ssGc/edit?usp=sharing)
 
 
