@@ -14,7 +14,6 @@
 
 
 # Conference Presentations
-
 * "How I tried to give up matplotlib" @ International Women's Day 14/03/20 [video [ru]](https://youtu.be/MbeNQQVH1jU)
 * "How I tried to quit using Matplotlib" @ Pytup 26/02/20 [slides [ru]](https://docs.google.com/presentation/d/1USgF8ssHvrJ1eOLo3dTAhned_xX3W5klhTkim62ssGc/edit?usp=sharing)
 * "How many times have you tried to learn algorithms?" @ WTM Meetup #2 30/01/20 [slides [ru]](https://docs.google.com/presentation/d/10-1h9GR7D2VmVzzg17oBug_VvHEsPtXUiKDktHW2lDw/edit?usp=sharing)
