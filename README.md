@@ -3,6 +3,7 @@
 
 
 # Publications, Articles & Posters
+
 * Medium blog: [lenavolzhina](https://medium.com/@lenavolzhina)
 * "Machine learning methods in weather forecasts" ([Scopus](https://www.scopus.com/authid/detail.uri?authorId=57191883985))
 * Master's thesis: "Machine learning methods in weather prediction problem" ([pdf [ru]](data/LaTex/master_thesis/pdf/diploma_print.pdf))
@@ -13,7 +14,7 @@
 
 
 # Conference Presentations
-
+* "How I tried to give up matplotlib" @ International Women's Day 14/03/20 [video [ru]](https://youtu.be/MbeNQQVH1jU)
 * "How I tried to quit using Matplotlib" @ Pytup 26/02/20 [slides [ru]](https://docs.google.com/presentation/d/1USgF8ssHvrJ1eOLo3dTAhned_xX3W5klhTkim62ssGc/edit?usp=sharing)
 * "How many times have you tried to learn algorithms?" @ WTM Meetup #2 30/01/20 [slides [ru]](https://docs.google.com/presentation/d/10-1h9GR7D2VmVzzg17oBug_VvHEsPtXUiKDktHW2lDw/edit?usp=sharing)
 * "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ PyConBY 22/02/20
@@ -35,6 +36,7 @@
 
 
 # Online courses, books
+* [Soft Skills School 2020](https://schoolcroc.ru/softskills): certificates [ru](data/SoftSkillsSchoolCertificateRU.png), [en](data/SoftSkillsSchoolCertificateENG.png)
 * "Deep Learning" S.Nikolenko et al.: [my notes & code](https://github.com/LenaVolzhina/playing-with-neural-networks/tree/master/DL_book_Nikolenko)
 * Learning How to Learn: [coursera](https://www.coursera.org/learn/learning-how-to-learn)
 * Open Machine Learning Course: https://github.com/Yorko/mlcourse.ai
@@ -46,3 +48,4 @@
 * [HacktoberFest](https://hacktoberfest.digitalocean.com) 2018 and 2019
 * [Django Girls](https://djangogirls.org) Kazan workshop 31/08/19: organizer and mentor
 * [Django Girls](https://djangogirls.org) SPb workshop 08/03/19: organizer and mentor
+* [Women Techmakers](https://www.womentechmakers.com/): ambassador and organizer of the WTM Moscow
