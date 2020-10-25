@@ -37,6 +37,7 @@
 
 
 # Online courses, books
+* [Soft Skills School 2020](https://schoolcroc.ru/softskills): certificates [ru](data/SoftSkillsSchoolCertificateRU.png), [en](data/SoftSkillsSchoolCertificateENG.png)
 * "Deep Learning" S.Nikolenko et al.: [my notes & code](https://github.com/LenaVolzhina/playing-with-neural-networks/tree/master/DL_book_Nikolenko)
 * Learning How to Learn: [coursera](https://www.coursera.org/learn/learning-how-to-learn)
 * Open Machine Learning Course: https://github.com/Yorko/mlcourse.ai
