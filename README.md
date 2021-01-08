@@ -17,7 +17,7 @@
 * "How I tried to give up matplotlib" @ International Women's Day 14/03/20 [video [ru]](https://youtu.be/MbeNQQVH1jU)
 * "How I tried to quit using Matplotlib" @ Pytup 26/02/20 [slides [ru]](https://docs.google.com/presentation/d/1USgF8ssHvrJ1eOLo3dTAhned_xX3W5klhTkim62ssGc/edit?usp=sharing)
 * "How many times have you tried to learn algorithms?" @ WTM Meetup #2 30/01/20 [slides [ru]](https://docs.google.com/presentation/d/10-1h9GR7D2VmVzzg17oBug_VvHEsPtXUiKDktHW2lDw/edit?usp=sharing)
-* "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ PyConBY 22/02/20
+* "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ PyConBY 22/02/20 [video [ru]](https://www.youtube.com/watch?v=NMm-NXubdnA&list=PLpVeA1tdgfCDdciEIzfItkMXhXEUyFewL&index=5), [slides [en]](https://drive.google.com/file/d/11AbA3YTkn-rM9qajcvUTWv9MS0AI1jXP/view)
 * "How to build hyperlocal weather forecast with machine learning techniques on a global scale" @ Pytup 23/11/19 [video [ru]](https://youtu.be/ECALEJ79KHg?list=PLQC2_0cDcSKCXhELTYYhZdr-aSisYHrXQ)
 * "Couple of words about motivation" @ Django Girls SPb #3 03/08/19 [slides [ru]](https://docs.google.com/presentation/d/1tBtdq7ZejwFHhtr4jbuyKYLn9a1XgxAiiFlttQ3orGA/edit?usp=sharing)
 * "Who needs algorithms?" @ PyLadies MSK Meetup #1 12/12/18 [slides [ru]](https://docs.google.com/presentation/d/1qwhmyWV7igqhHAy9a0uLnHqYg0OZVRQxPpnjKKfJThw)
