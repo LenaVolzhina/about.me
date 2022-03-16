@@ -1,145 +1,288 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
 %
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
 %
 % Original author:
-% Trey Hunner (http://www.treyhunner.com/)
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
 %
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass{resume} % Use the custom resume.cls style
-
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-\usepackage{hyperref}
-
-\name{Lena Volzhina} % Your name
-\address{Saint Petersburg, Russia} % Your address
-\address{(921)~77~22~515 \\ LenaVolzhina@ya.ru} % Your phone number and email
-\address{ \href{https://github.com/LenaVolzhina}{github.com/LenaVolzhina}}
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Education}
+\lastupdated % Print the Last Updated text at the top right
 
+\begin{minipage}[t][0.2\textheight][t]{\textwidth}
 
-{\bf Saint Petersburg State University} \hfill {{\em 2016 --- 2018} \\ 
-Department of Analytical Information Systems \\
-Master's degree with distinction in Computer Science \& Engineering
-%GPA: 4.58
-}
-
-{\bf Computer Science Center} \hfill {{\em 2014 --- 2017} \\ 
-%Contemporary issues in Computer Science, as well as tools for software engineering \\
-Modules included (full list here:  \href{https://compscicenter.ru/users/734/}{[ru]}): \\
-$\cdot$~Algorithms~and~Data~Structures~\hspace{1cm} 
-$\cdot$~Big~Data~\hspace{1cm} 
-$\cdot$~Mathematical~Statistics~\hspace{1cm}\\
-$\cdot$~Parallel~Programming~\hspace{1cm}
-$\cdot$~C++~\hspace{1cm} 
-$\cdot$~Java~\hspace{1cm} 
-$\cdot$~Python~\hspace{1cm}
-}
-
-{\bf Saint Petersburg State University} \hfill {{\em 2012 --- 2016} \\ 
-Department of Analytical Information Systems \\
-Bachelor's degree in Computer Science \& Engineering 
-%GPA: 4.58
+\namesection{}{Lena Volzhina}{ % Your name
+\urlstyle{same}\url{https://github.com/LenaVolzhina} \\ % Your website, LinkedIn profile or other web address
+\href{mailto:LenaVolzhina@ya.ru}{LenaVolzhina@ya.ru} | +372~5619~4358 \\  % Your contact information
+Tallinn, Estonia
 }
 
 
-%{\bf Gymnasium Classicum Petropolitanum} \hfill {{\em 2005 --- 2012} \\ }
+\section{Summary} 
 
-\end{rSection}
+\begin{flushleft}
+I am a senior data scientist with solid mathematical background and 6+ years of experience.
+\\
+Also, I am a regular speaker \href{https://github.com/LenaVolzhina/personal}{[link]} and a member of women tech communities.
+\end{flushleft}
+\sectionspace
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%	LEFT COLUMN
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Experience}
+\begin{minipage}[t][0.75\textheight][t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
 
-\begin{rSubsection}{Yandex.Weather}{September 2017 - present time}{Python Developer}{}
-\item At Yandex.Weather I'm using \textit{machine learning} methods to make weather forecasts. There are large datasets from forecast providers for analysis and processing, so I need to use various \textit{big data} technics such as MapReduce paradigm. The purpose of my work is to improve the quality of daily weather forecast, calculated by technology named Meteum. I also support and develop code that regularly calculates weather forecasts around the world.
+%------------------------------------------------
+% Education
+%------------------------------------------------
 
-\end{rSubsection}
+\section{Education} 
+\sectionspace
+
+\subsection{Saint Petersburg}   % TODO
+\subsection{State University}
+\location{2012 – 2018}
+\sectionspace
+\location{Master's degree with honors \\ in Computer Science \& Engineering}%\descript{Master's degree in Computer Science \& Engineering}
 
 
-\begin{rSubsection}{Stepik}{June 2015 - September 2017}{Python Developer}{}
-\item At Stepik I was involved in various data analysis tasks, mostly related to \textit{content recommendations}. During the first months of work I designed and implemented a simple \textit{rule-based} recommender system for educational content. Later I worked on an \textit{adaptive} recommender system, that uses knowledge graph and psychometric models for the most efficient learning. Also during my time at Stepik I completed many separate backend tasks using Django framework, including but not limited to implementation of data analysis algorithms described above.
-\end{rSubsection}
+\sectionspace % Some whitespace after the section
+%------------------------------------------------
+
+\subsection{Computer Science Center}
+\location{2014 – 2017}
+\sectionspace
+
+\location{Full list of modules is \href{https://compscicenter.ru/students/734/}{[here]}, including: }
+Algorithms~and~Data~Structures \\ %\textbullet{} 
+Mathematical~Statistics \\ %\textbullet{} \\
+Big~Data \\ %\textbullet{}   
+Parallel~Programming \\ %\textbullet{} \\
+C++ \\ %\textbullet{} 
+Java \\ %\textbullet{}
+Python
 
 
-%\begin{rSubsection}{}{2012 - present time}{Math Tutor}{}
-%\item Since school graduating I'm teaching general and olympiad maths, which improves my communication scills and also helps me to explain complex subjects more clearly.
-%\end{rSubsection}
+\sectionspace % Some whitespace after the section
 
-%\begin{rSubsection}{Lanit-Tercom, Inc.}{\em Sep 2013 - May 2014}{student project}{}
-%\item During the academic year I participated in a student project, aimed at running a quadrocopter. Our task was to keep it in the air and process data from its sensors. 
-%\item  At first I was involved in transfering videos from the camera to the client browser, and later I worked on the calibration of the sensors. During this project I improved my teamwork skills and got some practical experience working on a real case.
-%\end{rSubsection}
+%------------------------------------------------
+% Skills
+%------------------------------------------------
 
+\section{Skills}
+\sectionspace
+
+\subsection{Technologies}   % TODO ???
+\sectionspace
+
+    Python~(advanced,~Django)
+    \\ %\textbullet{}
+    C++~(basic)
+    \\ %\textbullet{}
+    Machine~learning
+    \\ %\textbullet{}
+    Data~visualization
+    \\ %\textbullet{}
+    SQL
+    \\ %\textbullet{}
+    Jupyter
+    \\ %\textbullet{}
+    Git
+    \\ %\textbullet{}
+    Scrum
+    \\ %\textbullet{}
+    Docker
+
+\sectionspace
+\subsection{Core skills}
+\sectionspace
+
+    Attention~to~detail
+    \\ %\textbullet{}
+    Communication
+    \\ %\textbullet{}
+    Documentation
+    \\ %\textbullet{}
+    Mentoring
+    \\ %\textbullet{}
+    Presentation~skills
+
+\sectionspace
+\subsection{Languages}
+\sectionspace
+
+    English~C1
+    \\ %\textbullet{}
+    Russian~Native
+    \\ %\textbullet{}
+    German~B1
+
+
+\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t][0.75\textheight][t]{0.6\textwidth} % The right column takes up 66% of the text width of the page
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+\sectionspace
+
+\runsubsection{Yandex.Maps}
+\\\descript{Senior Data Scientist}
+\location{2017 – current time}
+\sectionspace
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item My task at Yandex.Maps is to personalize search results for map-related queries using the user data.
+\item Currently, I run a series of experiments from scratch: collect and check training and verification pools, set up the pipelines, check a variety of hypoteses, run offline and online experiments. For that project I collaborate with several teams.
+\item Most of the infrastructure is written in C++, so I got some production experience, both with development and with complex systems debugging.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
-\end{rSection}
+\runsubsection{Yandex.Weather}
+\\\descript{Data Scientist}
+\location{2017 – 2021}
+\sectionspace
 
+\begin{tightitemize}
+\item At Yandex.Weather, I was using machine learning methods to make weather forecasts.
+\item There were large datasets from forecast providers for analysis and processing, so I needed to use various big data technics such as MapReduce paradigm. The purpose of my work was to improve the quality of daily weather forecasts.
+\item Mentorship: I have been providing guidance and feedback for two mentees.
+\item I also supported and developed Python code that regularly calculates weather forecasts around the world.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+%------------------------------------------------
+
+\runsubsection{Educational Platform Stepik}
+\\\descript{Python Developer~/~Data Analyst}
+\location{2015 – 2017}
+\sectionspace
+
+\begin{tightitemize}
+\item At Stepik, I was involved in various data analysis tasks, mostly related to content recommendations. 
+\item I designed and implemented a rule-based recommender system for educational content. Later I worked on an adaptive recommender system, that uses knowledge graph and psychometric models for the most efficient learning. 
+\item Also, during my time at Stepik, I completed many separate backend tasks using the Django framework, including but not limited to the implementation of data analysis algorithms described above.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Research
+%------------------------------------------------
+
+% \section{Research}
+
+% \runsubsection{Cornell Robot Learning Lab}
+% \descript{| Head Undergrad Research}
+
+% \location{Jan 2014 – Present | Ithaca, NY}
+% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which learns from large scale user preference feedback to plan robot trajectories in human environments. Publication submitted.
+
+% \sectionspace % Some whitespace after the section
+
+% %------------------------------------------------
+
+% \runsubsection{Cornell Phonetics Lab}
+% \descript{| Head Undergraduate Researcher}
+
+% \location{Mar 2012 – May 2013 | Ithaca, NY}
+% Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
+
+% \sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Awards
+%------------------------------------------------
+
+% \section{Awards} 
+
+% \begin{tabular}{rll}
+% 2014	 & top 52/2500 & KPCB Engineering Fellow\\
+% 2014	 & 2\textsuperscript{nd} most points & Google Code Jam, Qualification Round\\
+% 2014	 & 1\textsuperscript{st}/50 & Microsoft Coding Competition, Cornell\\
+% 2013	 & National & Jump Trading Challenge Finalist\\
+% 2013 & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament \\
+% 2012 & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011 & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% 2010 & National & Comp. Soc. of India's National Programming Contest\\
+% \end{tabular}
+
+% \sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Societies
+%------------------------------------------------
+
+% \section{Societies} 
+
+% \begin{tabular}{rll}
+% 2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society\\
+% 2014 & National & The Global Leadership and Education Forum (tGELF)\\
+% 2012 & National & Golden Key International Honor Society\\
+% 2012 & National & National Society of Collegiate Scholars\\
+% \end{tabular}
+
+% \sectionspace % Some whitespace after the section
 
 %----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
 
-\begin{rSection}{Technical Strengths}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & Python (advanced, Django), C++ (medium) \\
-Tools & Git, SQL, MapReduce \\
-More info can be found at & \href{https://github.com/LenaVolzhina/personal}{github.com/LenaVolzhina/personal} \\
-
-\end{tabular}
-
-\end{rSection}
-
-
-\begin{rSection}{Languages}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-English & Upper Intermediate  \\
-Russian & Native Speaker
-\end{tabular}
-
-\end{rSection}
-
-
-% выступления
-% * PyLadies 7.08.18 https://youtu.be/DfXsnSDouEo?t=859
-
-
+\end{minipage} % The end of the right column
 
 %----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
+%	SECOND PAGE (EXAMPLE)
 %----------------------------------------------------------------------------------------
 
-%\begin{rSection}{Section Name}
+%\newpage % Start a new page
 
-%Section content\ldots
+%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
 
-%\end{rSection}
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
 
 %----------------------------------------------------------------------------------------
 
